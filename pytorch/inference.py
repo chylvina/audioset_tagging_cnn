@@ -7,10 +7,10 @@ import librosa
 import matplotlib.pyplot as plt
 import torch
 
-from utilities import create_folder, get_filename
-from models import *
-from pytorch_utils import move_data_to_device
-import config
+from utils.utilities import create_folder, get_filename
+from pytorch.models import *
+from pytorch.pytorch_utils import move_data_to_device
+import utils.config
 
 
 def audio_tagging(args):
@@ -29,8 +29,8 @@ def audio_tagging(args):
     audio_path = args.audio_path
     device = torch.device('cuda') if args.cuda and torch.cuda.is_available() else torch.device('cpu')
     
-    classes_num = config.classes_num
-    labels = config.labels
+    classes_num = utils.config.classes_num
+    labels = utils.config.labels
 
     # Model
     Model = eval(model_type)
@@ -38,7 +38,7 @@ def audio_tagging(args):
         hop_size=hop_size, mel_bins=mel_bins, fmin=fmin, fmax=fmax, 
         classes_num=classes_num)
     
-    checkpoint = torch.load(checkpoint_path, map_location=device)
+    checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=True)
     model.load_state_dict(checkpoint['model'])
 
     # Parallel
@@ -47,7 +47,7 @@ def audio_tagging(args):
         print('GPU number: {}'.format(torch.cuda.device_count()))
         model = torch.nn.DataParallel(model)
     else:
-        print('Using CPU.')
+        print('Using CPU. ')
     
     # Load audio
     (waveform, _) = librosa.core.load(audio_path, sr=sample_rate, mono=True)
@@ -66,16 +66,14 @@ def audio_tagging(args):
     sorted_indexes = np.argsort(clipwise_output)[::-1]
 
     # Print audio tagging top probabilities
-    for k in range(10):
-        print('{}: {:.3f}'.format(np.array(labels)[sorted_indexes[k]], 
-            clipwise_output[sorted_indexes[k]]))
+    top_k = 5  # Number of top probabilities to return
+    top_probabilities = [(np.array(labels)[sorted_indexes[k]], clipwise_output[sorted_indexes[k]]) for k in range(top_k)]
 
-    # Print embedding
-    if 'embedding' in batch_output_dict.keys():
-        embedding = batch_output_dict['embedding'].data.cpu().numpy()[0]
-        print('embedding: {}'.format(embedding.shape))
+    for label, prob in top_probabilities:
+        print(f'{label}: {prob:.3f}')
 
-    return clipwise_output, labels
+    # Return top probabilities and labels
+    return top_probabilities, labels
 
 
 def sound_event_detection(args):
@@ -94,8 +92,8 @@ def sound_event_detection(args):
     audio_path = args.audio_path
     device = torch.device('cuda') if args.cuda and torch.cuda.is_available() else torch.device('cpu')
 
-    classes_num = config.classes_num
-    labels = config.labels
+    classes_num = utils.config.classes_num
+    labels = utils.config.labels
     frames_per_second = sample_rate // hop_size
 
     # Paths
