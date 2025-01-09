@@ -1,6 +1,10 @@
 import os
 import sys
-sys.path.insert(1, os.path.join(sys.path[0], '../utils'))
+# 添加项目根目录到 Python 路径
+current_dir = os.path.dirname(os.path.abspath(__file__))  # pytorch 目录
+parent_dir = os.path.dirname(current_dir)  # 项目根目录
+sys.path.insert(0, parent_dir)  # 添加到 Python 路径
+
 import numpy as np
 import argparse
 import librosa
