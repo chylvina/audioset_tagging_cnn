@@ -1,0 +1,178 @@
+Mon, 13 Jan 2025 15:21:54 main.py[line:116] INFO Namespace(mode='train', workspace='./workspaces/audioset_tagging', data_type='balanced_train', sample_rate=32000, window_size=1024, hop_size=320, mel_bins=64, fmin=50, fmax=14000, model_type='Cnn14', loss_type='clip_bce', balanced='balanced', augmentation='mixup', batch_size=32, learning_rate=0.001, resume_iteration=0, early_stop=10, cuda=True, filename='main')
+Mon, 13 Jan 2025 15:21:54 main.py[line:122] INFO Using CPU. Set --cuda flag to use GPU.
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:90] DEBUG bytecode dump:
+>          0	NOP(arg=None, lineno=1039)
+           2	LOAD_FAST(arg=0, lineno=1042)
+           4	LOAD_CONST(arg=1, lineno=1042)
+           6	BINARY_SUBSCR(arg=None, lineno=1042)
+           8	LOAD_FAST(arg=0, lineno=1042)
+          10	LOAD_CONST(arg=2, lineno=1042)
+          12	BINARY_SUBSCR(arg=None, lineno=1042)
+          14	COMPARE_OP(arg=4, lineno=1042)
+          16	LOAD_FAST(arg=0, lineno=1042)
+          18	LOAD_CONST(arg=1, lineno=1042)
+          20	BINARY_SUBSCR(arg=None, lineno=1042)
+          22	LOAD_FAST(arg=0, lineno=1042)
+          24	LOAD_CONST(arg=3, lineno=1042)
+          26	BINARY_SUBSCR(arg=None, lineno=1042)
+          28	COMPARE_OP(arg=5, lineno=1042)
+          30	BINARY_AND(arg=None, lineno=1042)
+          32	RETURN_VALUE(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:116] DEBUG pending: deque([State(pc_initial=0 nstack_initial=0)])
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:119] DEBUG stack: []
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:120] DEBUG state.pc_initial: State(pc_initial=0 nstack_initial=0)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=0, inst=NOP(arg=None, lineno=1039)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack []
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack []
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$x2.0']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$x2.0', '$const4.1']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=8, inst=LOAD_FAST(arg=0, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=10, inst=LOAD_CONST(arg=2, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2', '$x8.3']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=12, inst=BINARY_SUBSCR(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2', '$x8.3', '$const10.4']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=14, inst=COMPARE_OP(arg=4, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2', '$12binary_subscr.5']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=16, inst=LOAD_FAST(arg=0, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=18, inst=LOAD_CONST(arg=1, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$x16.7']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=20, inst=BINARY_SUBSCR(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$x16.7', '$const18.8']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=22, inst=LOAD_FAST(arg=0, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=24, inst=LOAD_CONST(arg=3, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=26, inst=BINARY_SUBSCR(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10', '$const24.11']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=28, inst=COMPARE_OP(arg=5, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9', '$26binary_subscr.12']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=30, inst=BINARY_AND(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$28compare_op.13']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=32, inst=RETURN_VALUE(arg=None, lineno=1042)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$30binary_and.14']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:138] DEBUG end state. edges=[]
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:219] DEBUG -------------------------Prune PHIs-------------------------
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:288] DEBUG Used_phis: defaultdict(<class 'set'>, {State(pc_initial=0 nstack_initial=0): set()})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:245] DEBUG defmap: {}
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:246] DEBUG phismap: defaultdict(<class 'set'>, {})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:267] DEBUG changing phismap: defaultdict(<class 'set'>, {})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:276] DEBUG keep phismap: {}
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:282] DEBUG new_out: defaultdict(<class 'dict'>, {})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:292] DEBUG ----------------------DONE Prune PHIs-----------------------
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:150] DEBUG block_infos State(pc_initial=0 nstack_initial=0):
+AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}), (6, {'index': '$const4.1', 'target': '$x2.0', 'res': '$6binary_subscr.2'}), (8, {'res': '$x8.3'}), (10, {'res': '$const10.4'}), (12, {'index': '$const10.4', 'target': '$x8.3', 'res': '$12binary_subscr.5'}), (14, {'lhs': '$6binary_subscr.2', 'rhs': '$12binary_subscr.5', 'res': '$14compare_op.6'}), (16, {'res': '$x16.7'}), (18, {'res': '$const18.8'}), (20, {'index': '$const18.8', 'target': '$x16.7', 'res': '$20binary_subscr.9'}), (22, {'res': '$x22.10'}), (24, {'res': '$const24.11'}), (26, {'index': '$const24.11', 'target': '$x22.10', 'res': '$26binary_subscr.12'}), (28, {'lhs': '$20binary_subscr.9', 'rhs': '$26binary_subscr.12', 'res': '$28compare_op.13'}), (30, {'lhs': '$14compare_op.6', 'rhs': '$28compare_op.13', 'res': '$30binary_and.14'}), (32, {'retval': '$30binary_and.14', 'castval': '$32return_value.15'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={})
+Mon, 13 Jan 2025 15:21:54 interpreter.py[line:1416] DEBUG label 0:
+    x = arg(0, name=x)                       ['x']
+    $const4.1 = const(int, 0)                ['$const4.1']
+    $6binary_subscr.2 = getitem(value=x, index=$const4.1, fn=<built-in function getitem>) ['$6binary_subscr.2', '$const4.1', 'x']
+    $const10.4 = const(int, -1)              ['$const10.4']
+    $12binary_subscr.5 = getitem(value=x, index=$const10.4, fn=<built-in function getitem>) ['$12binary_subscr.5', '$const10.4', 'x']
+    $14compare_op.6 = $6binary_subscr.2 > $12binary_subscr.5 ['$12binary_subscr.5', '$14compare_op.6', '$6binary_subscr.2']
+    $const18.8 = const(int, 0)               ['$const18.8']
+    $20binary_subscr.9 = getitem(value=x, index=$const18.8, fn=<built-in function getitem>) ['$20binary_subscr.9', '$const18.8', 'x']
+    $const24.11 = const(int, 1)              ['$const24.11']
+    $26binary_subscr.12 = getitem(value=x, index=$const24.11, fn=<built-in function getitem>) ['$26binary_subscr.12', '$const24.11', 'x']
+    $28compare_op.13 = $20binary_subscr.9 >= $26binary_subscr.12 ['$20binary_subscr.9', '$26binary_subscr.12', '$28compare_op.13']
+    $30binary_and.14 = $14compare_op.6 & $28compare_op.13 ['$14compare_op.6', '$28compare_op.13', '$30binary_and.14']
+    $32return_value.15 = cast(value=$30binary_and.14) ['$30binary_and.14', '$32return_value.15']
+    return $32return_value.15                ['$32return_value.15']
+
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:90] DEBUG bytecode dump:
+>          0	NOP(arg=None, lineno=1045)
+           2	LOAD_FAST(arg=0, lineno=1048)
+           4	LOAD_CONST(arg=1, lineno=1048)
+           6	BINARY_SUBSCR(arg=None, lineno=1048)
+           8	LOAD_FAST(arg=0, lineno=1048)
+          10	LOAD_CONST(arg=2, lineno=1048)
+          12	BINARY_SUBSCR(arg=None, lineno=1048)
+          14	COMPARE_OP(arg=0, lineno=1048)
+          16	LOAD_FAST(arg=0, lineno=1048)
+          18	LOAD_CONST(arg=1, lineno=1048)
+          20	BINARY_SUBSCR(arg=None, lineno=1048)
+          22	LOAD_FAST(arg=0, lineno=1048)
+          24	LOAD_CONST(arg=3, lineno=1048)
+          26	BINARY_SUBSCR(arg=None, lineno=1048)
+          28	COMPARE_OP(arg=1, lineno=1048)
+          30	BINARY_AND(arg=None, lineno=1048)
+          32	RETURN_VALUE(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:116] DEBUG pending: deque([State(pc_initial=0 nstack_initial=0)])
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:119] DEBUG stack: []
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:120] DEBUG state.pc_initial: State(pc_initial=0 nstack_initial=0)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=0, inst=NOP(arg=None, lineno=1045)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack []
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=2, inst=LOAD_FAST(arg=0, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack []
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=4, inst=LOAD_CONST(arg=1, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$x2.0']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=6, inst=BINARY_SUBSCR(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$x2.0', '$const4.1']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=8, inst=LOAD_FAST(arg=0, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=10, inst=LOAD_CONST(arg=2, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2', '$x8.3']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=12, inst=BINARY_SUBSCR(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2', '$x8.3', '$const10.4']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=14, inst=COMPARE_OP(arg=0, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$6binary_subscr.2', '$12binary_subscr.5']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=16, inst=LOAD_FAST(arg=0, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=18, inst=LOAD_CONST(arg=1, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$x16.7']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=20, inst=BINARY_SUBSCR(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$x16.7', '$const18.8']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=22, inst=LOAD_FAST(arg=0, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=24, inst=LOAD_CONST(arg=3, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=26, inst=BINARY_SUBSCR(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9', '$x22.10', '$const24.11']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=28, inst=COMPARE_OP(arg=1, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$20binary_subscr.9', '$26binary_subscr.12']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=30, inst=BINARY_AND(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$14compare_op.6', '$28compare_op.13']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:350] DEBUG dispatch pc=32, inst=RETURN_VALUE(arg=None, lineno=1048)
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:351] DEBUG stack ['$30binary_and.14']
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:138] DEBUG end state. edges=[]
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:219] DEBUG -------------------------Prune PHIs-------------------------
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:288] DEBUG Used_phis: defaultdict(<class 'set'>, {State(pc_initial=0 nstack_initial=0): set()})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:245] DEBUG defmap: {}
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:246] DEBUG phismap: defaultdict(<class 'set'>, {})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:267] DEBUG changing phismap: defaultdict(<class 'set'>, {})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:276] DEBUG keep phismap: {}
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:282] DEBUG new_out: defaultdict(<class 'dict'>, {})
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:292] DEBUG ----------------------DONE Prune PHIs-----------------------
+Mon, 13 Jan 2025 15:21:54 byteflow.py[line:150] DEBUG block_infos State(pc_initial=0 nstack_initial=0):
+AdaptBlockInfo(insts=((0, {}), (2, {'res': '$x2.0'}), (4, {'res': '$const4.1'}), (6, {'index': '$const4.1', 'target': '$x2.0', 'res': '$6binary_subscr.2'}), (8, {'res': '$x8.3'}), (10, {'res': '$const10.4'}), (12, {'index': '$const10.4', 'target': '$x8.3', 'res': '$12binary_subscr.5'}), (14, {'lhs': '$6binary_subscr.2', 'rhs': '$12binary_subscr.5', 'res': '$14compare_op.6'}), (16, {'res': '$x16.7'}), (18, {'res': '$const18.8'}), (20, {'index': '$const18.8', 'target': '$x16.7', 'res': '$20binary_subscr.9'}), (22, {'res': '$x22.10'}), (24, {'res': '$const24.11'}), (26, {'index': '$const24.11', 'target': '$x22.10', 'res': '$26binary_subscr.12'}), (28, {'lhs': '$20binary_subscr.9', 'rhs': '$26binary_subscr.12', 'res': '$28compare_op.13'}), (30, {'lhs': '$14compare_op.6', 'rhs': '$28compare_op.13', 'res': '$30binary_and.14'}), (32, {'retval': '$30binary_and.14', 'castval': '$32return_value.15'})), outgoing_phis={}, blockstack=(), active_try_block=None, outgoing_edgepushed={})
+Mon, 13 Jan 2025 15:21:54 interpreter.py[line:1416] DEBUG label 0:
+    x = arg(0, name=x)                       ['x']
+    $const4.1 = const(int, 0)                ['$const4.1']
+    $6binary_subscr.2 = getitem(value=x, index=$const4.1, fn=<built-in function getitem>) ['$6binary_subscr.2', '$const4.1', 'x']
+    $const10.4 = const(int, -1)              ['$const10.4']
+    $12binary_subscr.5 = getitem(value=x, index=$const10.4, fn=<built-in function getitem>) ['$12binary_subscr.5', '$const10.4', 'x']
+    $14compare_op.6 = $6binary_subscr.2 < $12binary_subscr.5 ['$12binary_subscr.5', '$14compare_op.6', '$6binary_subscr.2']
+    $const18.8 = const(int, 0)               ['$const18.8']
+    $20binary_subscr.9 = getitem(value=x, index=$const18.8, fn=<built-in function getitem>) ['$20binary_subscr.9', '$const18.8', 'x']
+    $const24.11 = const(int, 1)              ['$const24.11']
+    $26binary_subscr.12 = getitem(value=x, index=$const24.11, fn=<built-in function getitem>) ['$26binary_subscr.12', '$const24.11', 'x']
+    $28compare_op.13 = $20binary_subscr.9 <= $26binary_subscr.12 ['$20binary_subscr.9', '$26binary_subscr.12', '$28compare_op.13']
+    $30binary_and.14 = $14compare_op.6 & $28compare_op.13 ['$14compare_op.6', '$28compare_op.13', '$30binary_and.14']
+    $32return_value.15 = cast(value=$30binary_and.14) ['$30binary_and.14', '$32return_value.15']
+    return $32return_value.15                ['$32return_value.15']
+
+Mon, 13 Jan 2025 15:21:56 main.py[line:133] INFO Parameters num: 79679939
+Mon, 13 Jan 2025 15:21:56 data_generator.py[line:94] INFO Black list samples: 0
+Mon, 13 Jan 2025 15:21:56 data_generator.py[line:106] INFO Training number: 3
+Mon, 13 Jan 2025 15:21:56 data_generator.py[line:107] INFO Load target time: 0.002 s
+Mon, 13 Jan 2025 15:21:56 data_generator.py[line:191] INFO samples_num_per_class: [1 1 1]
+Mon, 13 Jan 2025 15:21:58 main.py[line:232] INFO Validate bal mAP: 0.667
+Mon, 13 Jan 2025 15:21:58 main.py[line:235] INFO Validate test mAP: 0.667
+Mon, 13 Jan 2025 15:21:58 utilities.py[line:159] INFO     Dump statistics to ./workspaces/audioset_tagging/statistics/main/sample_rate=32000,window_size=1024,hop_size=320,mel_bins=64,fmin=50,fmax=14000/data_type=balanced_train/Cnn14/loss_type=clip_bce/balanced=balanced/augmentation=mixup/batch_size=32/statistics.pkl
+Mon, 13 Jan 2025 15:21:58 utilities.py[line:160] INFO     Dump statistics to ./workspaces/audioset_tagging/statistics/main/sample_rate=32000,window_size=1024,hop_size=320,mel_bins=64,fmin=50,fmax=14000/data_type=balanced_train/Cnn14/loss_type=clip_bce/balanced=balanced/augmentation=mixup/batch_size=32/statistics_2025-01-13_15-21-56.pkl
+Mon, 13 Jan 2025 15:21:58 main.py[line:245] INFO iteration: 0, train time: 0.818 s, validate time: 1.177 s
+Mon, 13 Jan 2025 15:21:58 main.py[line:249] INFO ------------------------------------
+Mon, 13 Jan 2025 15:21:58 main.py[line:264] INFO Model saved to ./workspaces/audioset_tagging/checkpoints/main/sample_rate=32000,window_size=1024,hop_size=320,mel_bins=64,fmin=50,fmax=14000/data_type=balanced_train/Cnn14/loss_type=clip_bce/balanced=balanced/augmentation=mixup/batch_size=32/0_iterations.pth

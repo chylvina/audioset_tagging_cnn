@@ -71,14 +71,14 @@ def read_metadata(csv_path, classes_num, id_to_ix):
         lines = lines[3:]   # Remove heads
 
     audios_num = len(lines)
-    targets = np.zeros((audios_num, classes_num), dtype=np.bool)
+    targets = np.zeros((audios_num, classes_num), dtype=np.bool_)
     audio_names = []
  
     for n, line in enumerate(lines):
         items = line.split(', ')
         """items: ['--4gqARaEJE', '0.000', '10.000', '"/m/068hy,/m/07q6cd_,/m/0bt9lr,/m/0jbk"\n']"""
 
-        audio_name = 'Y{}.wav'.format(items[0])   # Audios are started with an extra 'Y' when downloading
+        audio_name = '{}.wav'.format(items[0])   # Audios are started with an extra 'Y' when downloading
         label_ids = items[3].split('"')[1].split(',')
 
         audio_names.append(audio_name)

@@ -1,0 +1,6 @@
+# Segments csv
+# num_ytids=3, num_segs=3, num_unique_labels=3, num_positive_labels=3
+# YTID, start_seconds, end_seconds, positive_labels
+001-15, 0, 0, "bug"
+3-bird11577, 0, 0, "bird"
+4-frog002, 0, 0, "frog"
