@@ -9,3 +9,6 @@ _logs
 *.pth
 paper_statistics
 files/*
+
+datasets/*
+workspaces/*
