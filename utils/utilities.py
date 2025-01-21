@@ -93,7 +93,12 @@ def read_metadata(csv_path, classes_num, id_to_ix):
 
 
 def float32_to_int16(x):
-    assert np.max(np.abs(x)) <= 1.2
+    # todo: 这里报错了，处理音频数据时遇到了音频信号幅值过大的问题
+    # assert np.max(np.abs(x)) <= 1.2
+
+    # 如果信号幅值过大，先进行归一化
+    if np.max(np.abs(x)) > 1.2:
+        x = x / np.max(np.abs(x))
     x = np.clip(x, -1, 1)
     return (x * 32767.).astype(np.int16)
 

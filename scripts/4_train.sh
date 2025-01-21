@@ -16,7 +16,7 @@ CUDA_VISIBLE_DEVICES=0 python3 pytorch/main.py train \
     --batch_size=32 \
     --learning_rate=1e-3 \
     --resume_iteration=0 \
-    --early_stop=10 \
+    --early_stop=100000 \
     --cuda
 
 # Plot statistics
