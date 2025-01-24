@@ -29,6 +29,13 @@ import config
 from losses import get_loss_func
 
 
+def gpu_monitor():
+    """监控GPU使用情况"""
+    print('GPU Memory Usage:')
+    print(f'Allocated: {torch.cuda.memory_allocated() / 1024**2:.2f} MB')
+    print(f'Cached: {torch.cuda.memory_reserved() / 1024**2:.2f} MB')
+    print(f'Max allocated: {torch.cuda.max_memory_allocated() / 1024**2:.2f} MB')
+
 def train(args):
     """Train AudioSet tagging model. 
 
@@ -249,9 +256,13 @@ def train(args):
             logging.info('------------------------------------')
 
             train_bgn_time = time.time()
+
+        # 在关键位置调用
+        if iteration % 100 == 0:
+            gpu_monitor()
         
         # Save model
-        if iteration % 100000 == 0:
+        if iteration % 10000 == 0:
             checkpoint = {
                 'iteration': iteration, 
                 'model': model.module.state_dict(), 
